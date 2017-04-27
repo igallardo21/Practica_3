@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{6816f2f4-09da-446d-bb03-b3d2a2093e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{5733b9ec-8bbc-47f2-ba7e-82b2f9eb2ce9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="scr\auxiliar.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Light.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Texture.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Scene.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Mesh.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\ProgramShader.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\BOX.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Object.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\PLANE.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\edition.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="scr\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scr\Camera.hpp">
+      <Filter>src</Filter>
+    </None>
+    <None Include="scr\globalVariables.hpp">
+      <Filter>src</Filter>
+    </None>
+    <None Include="scr\InitEvents.hpp">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\shaders\postProcessing.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\postProcessing.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\shader.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\shader.vert">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

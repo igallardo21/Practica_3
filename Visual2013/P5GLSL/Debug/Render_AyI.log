@@ -1,0 +1,27 @@
+﻿Compilación iniciada a las 06/02/2017 02:42:58.
+     1>Proyecto "C:\Users\Alberto\Dropbox\Universidad\MIGJRV\G3D\Practicas\P5\Visual2013\P3GLSL\Render_AyI.vcxproj" en el nodo 2 (Build destinos).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (P3GLSL.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\libs\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt scr\main.cpp
+         main.cpp
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\globalvariables.hpp(69): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\object.hpp(47): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\mesh.hpp(158): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\mesh.hpp(190): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\mesh.hpp(254): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\mesh.hpp(276): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\scene.hpp(306): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\main.cpp(27): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\main.cpp(49): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\main.cpp(58): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\main.cpp(149): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\main.cpp(151): warning C4018: '<' : no coinciden signed/unsigned
+     1>c:\users\alberto\dropbox\universidad\migjrv\g3d\practicas\p5\visual2013\p3glsl\scr\main.cpp(154): warning C4018: '<' : no coinciden signed/unsigned
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Alberto\Dropbox\Universidad\MIGJRV\G3D\Practicas\P5\Visual2013\P3GLSL\Debug\Render_AyI.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\libs\lib FreeImage.lib opengl32.lib freeglut.lib glew32.lib "assimp-vc120-mt.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Alberto\Dropbox\Universidad\MIGJRV\G3D\Practicas\P5\Visual2013\P3GLSL\Debug\Render_AyI.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Alberto\Dropbox\Universidad\MIGJRV\G3D\Practicas\P5\Visual2013\P3GLSL\Debug\Render_AyI.lib" /MACHINE:X86 /SAFESEH Debug\main.obj
+         Render_AyI.vcxproj -> C:\Users\Alberto\Dropbox\Universidad\MIGJRV\G3D\Practicas\P5\Visual2013\P3GLSL\Debug\Render_AyI.exe
+     1>Compilación del proyecto terminada "C:\Users\Alberto\Dropbox\Universidad\MIGJRV\G3D\Practicas\P5\Visual2013\P3GLSL\Render_AyI.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:02.23
