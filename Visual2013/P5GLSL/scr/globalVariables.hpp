@@ -62,8 +62,8 @@ float focalDistance = -25.0f;
 float maxDistanceFactor = 1.0f / 5.0f;
 
 //Valores frustrum
-float n = 1.0;
-float f = 50.0;
+float n = 0.1;
+float f = 500.0;
 
 // Máscaras de convolución
 float maskFactor = 1.0 / 9.0;
