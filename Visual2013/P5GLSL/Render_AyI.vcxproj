@@ -46,6 +46,9 @@
     <None Include="..\shaders\postProcessing.vert" />
     <None Include="..\shaders\shader.frag" />
     <None Include="..\shaders\shader.vert" />
+    <None Include="..\shaders\shaderG.frag" />
+    <None Include="..\shaders\shaderG.geom" />
+    <None Include="..\shaders\shaderG.vert" />
     <None Include="scr\Camera.hpp" />
     <None Include="scr\InitEvents.hpp" />
     <None Include="scr\globalVariables.hpp" />

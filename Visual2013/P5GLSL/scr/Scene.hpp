@@ -90,6 +90,11 @@ public:
 		meshList.push_back(new Mesh(pFile, vname, fname));
 	}
 
+	void Scene::addMeshG(const char *pFile, const char *vname, const char *gname, const char *fname)
+	{
+		meshList.push_back(new Mesh(pFile, vname, gname, fname));
+	}
+
 	////OBJECTS////
 	// Añade un nuevo objeto a la malla
 	void Scene::addObject(float angle, glm::vec3 axis, glm::vec3 position){

@@ -89,6 +89,16 @@ public:
 		
 	}
 
+	Mesh(const char *pFile, const char *vname, const char *gname, const char *fname)
+	{
+		progShader = new ProgramShader();
+		progShader->initShaderG(vname, gname, fname);
+
+		loadModel(pFile);
+		initObj();
+
+	}
+
 	~Mesh()
 	{
 

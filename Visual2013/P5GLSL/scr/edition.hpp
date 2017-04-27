@@ -78,7 +78,7 @@ void setUpScene(Scene* scene){
 
 
 	// MALLA 2 //
-	scene->addMesh("../objects/statue.obj", "../shaders/shader.vert", "../shaders/shader.frag");
+	scene->addMeshG("../objects/statue.obj", "../shaders/shaderG.vert", "../shaders/shaderG.geom", "../shaders/shaderG.frag");
 	scene->addColorTexture("../img/color2.png");
 	scene->addEmiTexture("../img/emissive.png");
 	scene->addNormalTexture("../img/normal.png");
@@ -92,7 +92,7 @@ void setUpScene(Scene* scene){
 	scene->setTraslationObject(translation2);
 
 	// POST PROCESO //
-	scene->addPostProcess("../shaders/postProcessing.vert", "../shaders/postProcessing.frag");
+	//scene->addPostProcess("../shaders/postProcessing.vert", "../shaders/postProcessing.frag");
 
 	///////////////////////////////
 	

@@ -1,18 +1,2 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (P3GLSL.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\globalVariables.hpp(69): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\Object.hpp(51): warning C4018: '<' : no coinciden signed/unsigned
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\Mesh.hpp(165): warning C4018: '<' : no coinciden signed/unsigned
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\Mesh.hpp(197): warning C4018: '<' : no coinciden signed/unsigned
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\Mesh.hpp(260): warning C4018: '<' : no coinciden signed/unsigned
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\Mesh.hpp(282): warning C4018: '<' : no coinciden signed/unsigned
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\Scene.hpp(309): warning C4018: '<' : no coinciden signed/unsigned
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\edition.hpp(16): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\edition.hpp(38): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
-c:\users\irene\desktop\urjc\2_semestre\pgatr\practicas\shaders\practica_3\visual2013\p5glsl\scr\edition.hpp(47): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
-scr\main.cpp(62): warning C4018: '<' : no coinciden signed/unsigned
-scr\main.cpp(64): warning C4018: '<' : no coinciden signed/unsigned
-scr\main.cpp(67): warning C4018: '<' : no coinciden signed/unsigned
-  Generando código
-  Generación de código finalizada
   Render_AyI.vcxproj -> C:\Users\Irene\Desktop\URJC\2_semestre\PGATR\Practicas\SHADERS\Practica_3\Visual2013\P5GLSL\Release\Render_AyI.exe

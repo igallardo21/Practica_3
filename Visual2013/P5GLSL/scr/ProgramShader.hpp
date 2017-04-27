@@ -13,6 +13,7 @@ class ProgramShader
 private:
 	unsigned int program;
 	unsigned int vshader;
+	unsigned int gshader;
 	unsigned int fshader;
 
 	unsigned int postProccesProgram;
@@ -31,6 +32,10 @@ public:
 			glDetachShader(program, vshader);
 			glDetachShader(program, fshader);
 			glDeleteShader(vshader);
+			if (gshader != NULL){
+				glDetachShader(program, gshader);
+				glDeleteShader(gshader);
+			}
 			glDeleteShader(fshader);
 			glDeleteProgram(program);
 		}
@@ -49,12 +54,48 @@ public:
 	void ProgramShader::initShader(const char *vname, const char *fname)
 	{
 		//Cargar shaders
-		vshader = loadShader(vname, GL_VERTEX_SHADER);
+		vshader = loadShader(vname, GL_VERTEX_SHADER);		
 		fshader = loadShader(fname, GL_FRAGMENT_SHADER);
+		
 
 		//Cargar programa & asignarlos al programa
 		program = glCreateProgram();
 		glAttachShader(program, vshader);
+		glAttachShader(program, fshader);
+
+		// Linkeo el programa
+		glLinkProgram(program);
+
+		// ¿Error en el linkado?
+		int linked;
+		glGetProgramiv(program, GL_LINK_STATUS, &linked);
+		if (!linked)
+		{
+			GLint logLen;
+			glGetProgramiv(program, GL_INFO_LOG_LENGTH, &logLen);
+			char *logString = new char[logLen];
+			glGetProgramInfoLog(program, logLen, NULL, logString);
+			std::cout << "Error: " << logString << std::endl;
+			delete logString;
+			glDeleteProgram(program);
+			program = 0;
+			exit(-1);
+		}
+
+	}
+
+	void ProgramShader::initShaderG(const char *vname, const char *gname, const char *fname)
+	{
+		//Cargar shaders
+		vshader = loadShader(vname, GL_VERTEX_SHADER);
+		gshader = loadShader(gname, GL_GEOMETRY_SHADER);
+		fshader = loadShader(fname, GL_FRAGMENT_SHADER);
+
+
+		//Cargar programa & asignarlos al programa
+		program = glCreateProgram();
+		glAttachShader(program, vshader);
+		glAttachShader(program, gshader);
 		glAttachShader(program, fshader);
 
 		// Linkeo el programa
