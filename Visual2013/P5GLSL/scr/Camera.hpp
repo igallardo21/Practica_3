@@ -16,7 +16,7 @@ public:
 	// Constructor por defecto
 	Camera(){
 		view = glm::translate(glm::mat4(1.0f), glm::vec3(0.0, 0.0, -10.0));
-		proj = glm::perspective(glm::radians(50.0f), 720.0f / 480.0f, 1.0f, 20.0f);
+		proj = glm::perspective(glm::radians(50.0f), 720.0f / 480.0f, 1.0f, 200.0f);
 	}
 	// Constructor habitual
 	Camera(glm::vec3 posCamera, glm::vec2 angCamera, float fieldOfView, float width, float height, float nearPlane, float farPlane){

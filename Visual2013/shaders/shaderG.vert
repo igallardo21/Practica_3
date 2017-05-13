@@ -15,17 +15,19 @@ layout(location = 2) uniform mat4 normal;
 
 out vec3 color;
 out vec3 pos;
+out vec3 pointN;
+out vec3 pointT;
+out vec3 pointB;
 out mat3 TBN;
 out vec2 texCoord;
-
 
 void main()
 {
 	color = inColor;
 	texCoord = inTexCoord;
-	vec3 pointN = normalize((normal * vec4(inNormal,0.0)).xyz);
-	vec3 pointT = normalize((modelView * vec4(inTangent,0.0)).xyz);
-	vec3 pointB = cross(pointN, pointT);
+	pointN = normalize((normal * vec4(inNormal,0.0)).xyz);
+	pointT = normalize((modelView * vec4(inTangent,0.0)).xyz);
+	pointB = cross(pointN, pointT);
 	TBN[0].xyz = pointT;
 	TBN[1].xyz = pointB;
 	TBN[2].xyz = pointN;

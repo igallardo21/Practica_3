@@ -184,6 +184,9 @@ public:
 				meshVertexNormal[i * 3] = mesh->mNormals[i].x;
 				meshVertexNormal[i * 3 + 1] = mesh->mNormals[i].y;
 				meshVertexNormal[i * 3 + 2] = mesh->mNormals[i].z;
+
+				//std::cout << "vn: " << mesh->mNormals[i].x << " - " << mesh->mNormals[i].y << " - " << mesh->mNormals[i].z << std::endl;
+
 			}
 
 			if (mesh->HasTextureCoords(0)) {

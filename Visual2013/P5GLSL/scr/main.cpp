@@ -3,6 +3,7 @@
 #include "globalVariables.hpp"
 #include "InitEvents.hpp"
 #include "edition.hpp"
+#include "Splines.h"
 
 #include <windows.h>
 #include <gl/glew.h>
@@ -13,7 +14,6 @@
 #define GLM_FORCE_RADIANS
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <iostream>
 
 
 Scene* scene = new Scene();
@@ -24,6 +24,17 @@ int main(int argc, char** argv)
 	initContext(argc, argv);
 	initOGL();
 	setUpScene(scene);
+
+	// CURVA
+	SplineList* curve = new SplineList();
+	curve->LoadSplines("../Splines/circle.sp");
+	printf("El número de splines en mi curva es %i\n", curve->GetSize());
+	Vector currentSpline[4];
+	curve->MoveToNext();
+	curve->GetCurrent(currentSpline);
+	printf("El actual spline posee los puntos %d %d %d %d \n", currentSpline[0], currentSpline[1], currentSpline[2], currentSpline[3]);
+	
+
 	navigation();
 	glutMainLoop();
 	delete scene;

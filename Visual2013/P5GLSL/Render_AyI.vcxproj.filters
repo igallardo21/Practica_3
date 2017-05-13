@@ -39,6 +39,15 @@
     <ClInclude Include="scr\edition.hpp">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="scr\Splines.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Utils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\spline.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="scr\main.cpp">

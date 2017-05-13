@@ -90,7 +90,7 @@ public:
 		meshList.push_back(new Mesh(pFile, vname, fname));
 	}
 
-	void Scene::addMeshG(const char *pFile, const char *vname, const char *gname, const char *fname)
+	void Scene::addMesh(const char *pFile, const char *vname, const char *gname, const char *fname)
 	{
 		meshList.push_back(new Mesh(pFile, vname, gname, fname));
 	}

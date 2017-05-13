@@ -1,29 +1,10 @@
-﻿Compilación iniciada a las 27/04/2017 18:37:01.
+﻿Compilación iniciada a las 12/05/2017 18:09:03.
      1>Proyecto "C:\Users\Alberto\Documents\Practica 3\Practica_3\Visual2013\P5GLSL\Render_AyI.vcxproj" en el nodo 2 (Build destinos).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (P3GLSL.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\libs\include\ /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt scr\main.cpp
-         main.cpp
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\globalVariables.hpp(65): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\globalVariables.hpp(69): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\Object.hpp(51): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\Mesh.hpp(175): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\Mesh.hpp(207): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\Mesh.hpp(270): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\Mesh.hpp(292): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\Scene.hpp(314): warning C4018: '<' : no coinciden signed/unsigned
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\edition.hpp(16): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
-     1>c:\users\alberto\documents\practica 3\practica_3\visual2013\p5glsl\scr\edition.hpp(42): warning C4305: 'inicializando' : truncamiento de 'double' a 'float'
-     1>scr\main.cpp(62): warning C4018: '<' : no coinciden signed/unsigned
-     1>scr\main.cpp(64): warning C4018: '<' : no coinciden signed/unsigned
-     1>scr\main.cpp(67): warning C4018: '<' : no coinciden signed/unsigned
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Alberto\Documents\Practica 3\Practica_3\Visual2013\P5GLSL\Release\Render_AyI.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\libs\lib FreeImage.lib freeglut.lib glew32.lib opengl32.lib "assimp-vc120-mt.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Alberto\Documents\Practica 3\Practica_3\Visual2013\P5GLSL\Release\Render_AyI.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Alberto\Documents\Practica 3\Practica_3\Visual2013\P5GLSL\Release\Render_AyI.lib" /MACHINE:X86 /SAFESEH Release\main.obj
-         Generando código
-         Generación de código finalizada
+     1>Link:
          Render_AyI.vcxproj -> C:\Users\Alberto\Documents\Practica 3\Practica_3\Visual2013\P5GLSL\Release\Render_AyI.exe
      1>Compilación del proyecto terminada "C:\Users\Alberto\Documents\Practica 3\Practica_3\Visual2013\P5GLSL\Render_AyI.vcxproj" (Build destinos).
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:02.60
+Tiempo transcurrido 00:00:00.06

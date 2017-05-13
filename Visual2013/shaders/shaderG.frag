@@ -4,10 +4,12 @@
 
 layout(location = 0) out vec4 outColor;
 
-in vec3 fragColor;
-in vec3 fragPos;
-in vec2 fragTexCoord;
-in mat3 fragTBN;
+in vec3 color;
+in vec3 pos;
+in vec2 texCoord;
+in vec3 pointN;
+in mat3 TBN;
+
 
 layout(binding = 0) uniform sampler2D colorTex;
 layout(binding = 1) uniform sampler2D emiTex;
@@ -69,16 +71,21 @@ vec3 shade();
 
 void main()
 {
-	Ka = texture(colorTex, fragTexCoord).rgb;
-	Kd = texture(colorTex, fragTexCoord).rgb;
+	Ka = texture(colorTex, texCoord).rgb;
+	Kd = texture(colorTex, texCoord).rgb;
+	//Ka = vec3(0.7f, 0.7f, 0.7f);
+	//Kd = vec3(0.7f, 0.7f, 0.7f);
 	
-	Ke = texture(emiTex, fragTexCoord).rgb;
-	Ks = texture(specTex, fragTexCoord).rgb;
+	//Ke = texture(emiTex, texCoord).rgb;
+	//Ks = texture(specTex, texCoord).rgb;
 
-	vec3 N_text = texture(normalTex,fragTexCoord).xyz;
-	N = normalize(N_text * 2.0 - 1.0);
-	N = normalize(fragTBN * N);
-	
+	Ke = vec3(0.0);
+	Ks = vec3(0.1);
+
+	//vec3 N_text = texture(normalTex,texCoord).xyz;
+	//N = normalize(N_text * 2.0 - 1.0);
+	//N = normalize(TBN * N);
+	N = pointN;
 	outColor = vec4(shade(), 1.0);   
 }
 
@@ -96,7 +103,7 @@ vec3 shade()
 		D = (view * vec4(D,0.0)).xyz; //Dirección de la luz, equivalente a L
 		diffuse = Id * Kd * dot (N,-D);
 		c += clamp(diffuse, 0.0, 1.0);
-		V = normalize (-fragPos);
+		V = normalize (-pos);
 		R = normalize (reflect (D,N));
 		factor = max (dot (R,V), 0.01);
 		specular = Is*Ks*pow(factor,alpha);
@@ -115,20 +122,22 @@ vec3 shade()
 		xi = focalLightsAngle[i] * 3.14159264 / 180;
 		f = 5; //Control de la atenuación de la luz
 
-		d = length(lpos - fragPos);
+		d = length(lpos - pos);
 		fatt = 1/(c_1+c_2*d+c_3*pow(d,2));
 		fatt = min(fatt,1);
 
-		L = normalize (lpos - fragPos);
+		L = normalize (lpos - pos);
 		D = (view * vec4(D,0.0f)).xyz; //Dirección del foco, no es equivalente a L como en direccional
 		Ip  = (dot(D,-L)-cos(xi))/(1-cos(xi)); 
 		Ip  = pow(Ip ,f);
-		diffuse = fatt * Ip * Id * Kd * dot (L,N);
+		//diffuse = fatt * Ip * Id * Kd * dot (L,N);
+		diffuse = Ip * Id * Kd * dot (L,N);
 		c += clamp(diffuse, 0.0, 1.0);
-		V = normalize (-fragPos);
+		V = normalize (-pos);
 		R = normalize (reflect (-L,N));
 		factor = max (dot (R,V), 0.01);
-		specular = fatt*Ip*Is*Ks*pow(factor,alpha);
+		//specular = fatt*Ip*Is*Ks*pow(factor,alpha);
+		specular = Ip*Is*Ks*pow(factor,alpha);
 		c += clamp(specular, 0.0, 1.0);
 
 		i++;
@@ -141,19 +150,19 @@ vec3 shade()
 		Id = pointLightsIntensity[i].xyz;
 		Is = pointLightsIntensity[i].xyz;
 
-		d = length(lpos - fragPos);
+		d = length(lpos - pos);
 		fatt = 1/(c_1+c_2*d+c_3*pow(d,2));
 		fatt = min(fatt,1);
 
-		L = normalize (lpos - fragPos);
+		L = normalize (lpos - pos);
 		diffuse = fatt * Id * Kd * dot (L,N);
 		c += clamp(diffuse, 0.0, 1.0);
-		V = normalize (-fragPos);
+		V = normalize (-pos);
 		R = normalize (reflect (-L,N));
 		factor = max (dot (R,V), 0.01);
-		specular = fatt*Is*Ks*pow(factor,alpha);
+		specular = fatt * Is*Ks*pow(factor,alpha);
 		c += clamp(specular, 0.0, 1.0);
-
+		
 		i++;
 	}
 

@@ -7,6 +7,7 @@ layout(location = 0) out vec4 outColor;
 in vec3 color;
 in vec3 pos;
 in vec2 texCoord;
+in vec3 pointN;
 in mat3 TBN;
 
 
@@ -72,13 +73,19 @@ void main()
 {
 	Ka = texture(colorTex, texCoord).rgb;
 	Kd = texture(colorTex, texCoord).rgb;
-	Ke = texture(emiTex, texCoord).rgb;
-	Ks = texture(specTex, texCoord).rgb;
-
-	vec3 N_text = texture(normalTex,texCoord).xyz;
-	N = normalize(N_text * 2.0 - 1.0);
-	N = normalize(TBN * N);
+	//Ka = vec3(0.7f, 0.7f, 0.7f);
+	//Kd = vec3(0.7f, 0.7f, 0.7f);
 	
+	//Ke = texture(emiTex, texCoord).rgb;
+	//Ks = texture(specTex, texCoord).rgb;
+
+	Ke = vec3(0.0);
+	Ks = vec3(0.1);
+
+	//vec3 N_text = texture(normalTex,texCoord).xyz;
+	//N = normalize(N_text * 2.0 - 1.0);
+	//N = normalize(TBN * N);
+	N = pointN;
 	outColor = vec4(shade(), 1.0);   
 }
 
@@ -123,12 +130,14 @@ vec3 shade()
 		D = (view * vec4(D,0.0f)).xyz; //Dirección del foco, no es equivalente a L como en direccional
 		Ip  = (dot(D,-L)-cos(xi))/(1-cos(xi)); 
 		Ip  = pow(Ip ,f);
-		diffuse = fatt * Ip * Id * Kd * dot (L,N);
+		//diffuse = fatt * Ip * Id * Kd * dot (L,N);
+		diffuse = Ip * Id * Kd * dot (L,N);
 		c += clamp(diffuse, 0.0, 1.0);
 		V = normalize (-pos);
 		R = normalize (reflect (-L,N));
 		factor = max (dot (R,V), 0.01);
-		specular = fatt*Ip*Is*Ks*pow(factor,alpha);
+		//specular = fatt*Ip*Is*Ks*pow(factor,alpha);
+		specular = Ip*Is*Ks*pow(factor,alpha);
 		c += clamp(specular, 0.0, 1.0);
 
 		i++;
@@ -151,9 +160,9 @@ vec3 shade()
 		V = normalize (-pos);
 		R = normalize (reflect (-L,N));
 		factor = max (dot (R,V), 0.01);
-		specular = fatt*Is*Ks*pow(factor,alpha);
+		specular = fatt * Is*Ks*pow(factor,alpha);
 		c += clamp(specular, 0.0, 1.0);
-
+		
 		i++;
 	}
 
